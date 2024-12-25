@@ -139,11 +139,14 @@ if(found!=-1){
 		}
 		if(choice==10){
 			printf("phan tu sau khi duoc dao nguoc: ");
-			for(int i=0, j=n;i<n, j<n;i++, j--){
-				int temp=a[j];
-				a[j]=a[i];
-				a[i]=temp;
-			}
+		int left = 0, right = n - 1;
+    while(left < right) {
+        int temp = a[left];
+        a[left] = a[right];
+        a[right] = temp;
+        left++;
+        right--;
+    }
 		}
 		
 	}while(choice!=11);
